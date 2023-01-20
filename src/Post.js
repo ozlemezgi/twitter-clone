@@ -11,25 +11,25 @@ function Post({displayName, username, verified, text, image, avatar}) {
   return (
     <div className='post'>
         <div className='post__avatar'>
-            <Avatar src="https://avatars.githubusercontent.com/u/92430613?s=96&v=4"/>
+            <Avatar src={avatar}/>
         </div>
         <div className='post__body'>
             <div className='post__header'>
                 <div className='post__headerText'>
-                    <h3>Ozlem Ezgi SARI {" "}
+                    <h3>{displayName}{" "}
                         <span className='post__headerSpecial'>
-                            <VerifiedUserIcon className='post__badge' /> 
-                            @ozlemezgi
+                            {verified &&<VerifiedUserIcon className='post__badge' /> }
+                            @{username}
                         </span>
                     </h3>
                 </div>
                 <div className='post__headerDescription'>
                     <p>
-                        I challange you to build a Twitter Clone with React.js!!!
+                       {text}
                     </p>
                 </div>
             </div>
-            <img src='https://pbs.twimg.com/profile_images/1488548719062654976/u6qfBBkF_400x400.jpg'></img>
+            <img src={image}></img>
             <div className='post__footer'>
                 <ChatBubbleOutlineIcon fontSize='small'/>
                 <RepeatIcon fontSize='small' />

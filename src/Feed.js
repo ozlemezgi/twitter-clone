@@ -16,7 +16,14 @@ function Feed() {
         <TweetBox />
 
         {/* Post */}
-        <Post />
+        <Post 
+        displayName="Ezgi SARI"
+        username="asdf"
+        verified={true}
+        text="Yoo its working"
+        avatar="https://avatars.githubusercontent.com/u/92430613?s=96&v=4"
+        image="https://pbs.twimg.com/profile_images/1488548719062654976/u6qfBBkF_400x400.jpg"
+        />
         <Post />
         <Post />
         <Post />
